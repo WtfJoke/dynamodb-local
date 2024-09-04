@@ -13,7 +13,11 @@ DynamoDbLocal.launch(8000)
         console.log('PID created: ', ChildProcess.pid);
 
         //do your tests
-
-        DynamoDbLocal.stop(8000);
-        console.log('finished');
+        // sleep 2 minutes
+        setTimeout(function () {
+            console.log('stopping');
+            DynamoDbLocal.stop(8000);
+            console.log('finished');
+        }, 120000);
+      
     });
